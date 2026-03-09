@@ -12,7 +12,7 @@ function App() {
   const [filter, setFilter] = useState("all");
 
   const fetchTasks = async () => {
-    const res = await axios.get(`/${API}/tasks`);
+    const res = await axios.get(`${API}/tasks`);
     setTasks(res.data);
   };
 
@@ -23,7 +23,7 @@ function App() {
   const addTask = async () => {
     if (!title.trim()) return;
 
-    await axios.post(`/${API}/tasks`, {
+    await axios.post(`${API}/tasks`, {
       title,
       priority
     });
@@ -33,12 +33,12 @@ function App() {
   };
 
   const toggleTask = async (id) => {
-    await axios.patch(`/${API}/tasks/${id}`);
+    await axios.patch(`${API}/tasks/${id}`);
     fetchTasks();
   };
 
   const deleteTask = async (id) => {
-    await axios.delete(`/${API}/tasks/${id}`);
+    await axios.delete(`${API}/tasks/${id}`);
     fetchTasks();
   };
 
