@@ -8,7 +8,7 @@ const app = express();
 const PORT = 5000;
 
 app.use(cors({
-  origin: "https://blostemassignment1.vercel.app"
+  origin: "https://blostem-assignment-ik0n.onrender.com"
 }))
 app.use(express.json());
 
