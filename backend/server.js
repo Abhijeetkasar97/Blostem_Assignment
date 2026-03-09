@@ -3,15 +3,12 @@
 const express = require("express");
 const cors = require("cors");
 const { v4: uuidv4 } = require("uuid");
-
 const app = express();
+app.use(express.json());
 const PORT = process.env.PORT || 5000;
-
 app.use(cors({
   origin: "https://blostemassignment1.vercel.app"
 }))
-app.use(express.json());
-
 let tasks = [];
 
 /**
