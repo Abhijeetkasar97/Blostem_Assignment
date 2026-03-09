@@ -5,7 +5,7 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
-  const API = "https://blostem-assignment-ik0n.onrender.com";
+  const API = "https://blostem-assignment-2.onrender.com";
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState("");
   const [priority, setPriority] = useState("low");
